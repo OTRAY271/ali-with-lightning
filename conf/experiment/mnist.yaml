@@ -3,3 +3,5 @@ defaults:
   - /datamodule: mnist
   - /litmodule: mnist
   - /trainer: mnist
+
+run_prefix: mnist

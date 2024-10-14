@@ -1,9 +1,8 @@
 defaults:
   - _self_
-  - experiment: ${experiment}
+  - experiment: cifar10
 
 project_name: ali-with-lightning
-experiment: cifar10
 seed: 42
 float32_matmul_precision: high
 ckpt: null

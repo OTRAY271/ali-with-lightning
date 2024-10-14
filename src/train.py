@@ -20,7 +20,8 @@ def train(cfg: DictConfig) -> None:
 
     wandb_logger = WandbLogger(
         project=cfg.project_name,
-        name=f"{cfg.experiment}_{str(run_dir).replace("/", "_")}",
+        name=f"{cfg.run_prefix}_{str(run_dir).replace("/", "_")}",
+        tags=[cfg.run_prefix],
     )
     wandb_logger.experiment.config.update(
         OmegaConf.to_container(cfg, resolve=True, throw_on_missing=True)

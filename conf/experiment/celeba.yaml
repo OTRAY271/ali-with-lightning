@@ -3,3 +3,5 @@ defaults:
   - /datamodule: celeba
   - /litmodule: celeba
   - /trainer: celeba
+
+run_prefix: celeba

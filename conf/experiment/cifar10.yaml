@@ -3,3 +3,5 @@ defaults:
   - /datamodule: cifar10
   - /litmodule: cifar10
   - /trainer: cifar10
+
+run_prefix: cifar10
