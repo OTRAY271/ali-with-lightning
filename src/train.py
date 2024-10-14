@@ -18,7 +18,10 @@ def train(cfg: DictConfig) -> None:
 
     run_dir = Path(HydraConfig.get().run.dir)
 
-    wandb_logger = WandbLogger(project=cfg.project_name)
+    wandb_logger = WandbLogger(
+        project=cfg.project_name,
+        name=f"{cfg.experiment}_{str(run_dir).replace("/", "_")}",
+    )
     wandb_logger.experiment.config.update(
         OmegaConf.to_container(cfg, resolve=True, throw_on_missing=True)
     )
