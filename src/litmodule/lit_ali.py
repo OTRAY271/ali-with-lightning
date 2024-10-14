@@ -102,7 +102,7 @@ class LitALI(L.LightningModule):
                     "val/samples": wandb.Image(samples),
                     "val/reconstructions": wandb.Image(reconstructions),
                 },
-                steps=self.current_epoch,
+                step=self.current_epoch,
             )
 
     def configure_optimizers(
