@@ -16,7 +16,7 @@ class LitALI(L.LightningModule):
         self.lr = lr
         self.criterion = nn.BCEWithLogitsLoss()
 
-        self.z_val = torch.randn(64, self.ali.latent_dim, 1, 1, device=self.device)
+        self.z_val = torch.randn(64, self.ali.latent_dim, 1, 1)
 
         self.automatic_optimization = False
 
@@ -91,7 +91,9 @@ class LitALI(L.LightningModule):
         )
 
         if batch_idx == 0:
-            samples = torchvision.utils.make_grid(self.ali.dec(self.z_val))
+            samples = torchvision.utils.make_grid(
+                self.ali.dec(self.z_val.to(self.device))
+            )
             reconstructions = torchvision.utils.make_grid(
                 self._alternate_images(x[:32], recon_x[:32])
             )
