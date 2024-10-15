@@ -21,10 +21,10 @@ poetry run python src/train.py experiment={cifar10|celeba|mnist}
 
 ### CIFAR-10 (6475 epochs)
 
-samples:
+samples:\
 ![samples](https://github.com/user-attachments/assets/a56dedc5-2c10-4e57-b249-0d1f1226c696)
 
-reconstructions:
+reconstructions:\
 ![reconstructions](https://github.com/user-attachments/assets/23015d08-d43c-4f8e-8e47-55ef5494d882)
 
 
@@ -39,10 +39,10 @@ reconstructions:
 
 ### MNIST (100 epochs)
 
-samples:
+samples:\
 ![samples](https://github.com/user-attachments/assets/b7c4cb63-3901-4435-9b76-310d06dd71dd)
 
-reconstructions:
+reconstructions:\
 ![reconstructions](https://github.com/user-attachments/assets/4dad7157-e32e-4e03-8ac8-2e52712be2e5)
 
 
