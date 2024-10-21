@@ -30,11 +30,12 @@ reconstructions:\
 
 ### CelebA (123 epochs)
 
-samples:
+samples:\
+![samples](https://github.com/user-attachments/assets/405030cd-a59c-44b6-aa31-94b4f1ad77ea)
 
 
-reconstructions:
-
+reconstructions:\
+![reconstructions](https://github.com/user-attachments/assets/6b1cb750-dde4-44a1-9fb6-bdff39bf88d6)
 
 
 ### MNIST (100 epochs)
