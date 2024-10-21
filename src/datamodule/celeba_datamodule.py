@@ -18,6 +18,7 @@ class CelebADataModule(L.LightningDataModule):
                 transforms.Resize(64),
                 transforms.CenterCrop(64),
                 transforms.ToTensor(),
+                transforms.Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5)),
             ]
         )
 
