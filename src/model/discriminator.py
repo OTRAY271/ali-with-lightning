@@ -147,12 +147,12 @@ class CelebADiscriminator(BaseDiscriminator):
         )
 
         z_layers = nn.Sequential(
-            self._conv_block(latent_dim, 512, kernel_size=1, stride=1),
-            self._conv_block(512, 512, kernel_size=1, stride=1),
+            self._conv_block(latent_dim, 1024, kernel_size=1, stride=1),
+            self._conv_block(1024, 1024, kernel_size=1, stride=1),
         )
 
         xz_layers = nn.Sequential(
-            self._conv_block(1024, 2048, kernel_size=1, stride=1),
+            self._conv_block(1536, 2048, kernel_size=1, stride=1),
             self._conv_block(2048, 2048, kernel_size=1, stride=1),
             nn.Conv2d(2048, 1, kernel_size=1, stride=1),
             nn.Dropout(0.2),
