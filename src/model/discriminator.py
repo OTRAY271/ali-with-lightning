@@ -155,7 +155,7 @@ class CelebADiscriminator(BaseDiscriminator):
             self._conv_block(1024, 2048, kernel_size=1, stride=1),
             self._conv_block(2048, 2048, kernel_size=1, stride=1),
             nn.Conv2d(2048, 1, kernel_size=1, stride=1),
-            nn.Dropout(0.5),
+            nn.Dropout(0.2),
         )
 
         super().__init__(x_layers, z_layers, xz_layers, latent_dim)
